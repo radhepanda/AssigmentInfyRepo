@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:/db/liquibase-changeLog.xml
+    enabled: true
+  security.oauth2.resourceserver.jwt.issuer-uri: https://dev-9au261v5.us.auth0.com/
+
+auth0.audience: https://abn.amro.recipes.com
+auth0.domain: https://dev-9au261v5.us.auth0.com/

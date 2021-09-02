@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="204px" preserveAspectRatio="none" style="width:323px;height:204px;background:#FFFFFF;" version="1.1" viewBox="0 0 323 204" width="323px" zoomAndPan="magnify"><defs><filter height="300%" id="f1vwvf5woeguxm" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[766eac0c89f51a4b467d310638b2a60d]
+entity auth0--><path d="M107.2599,154.1758 C110.3832,148.1867 116.0028,145.7777 120.7894,152.3901 C125.2731,145.3818 132.4749,145.9749 136.8822,152.4809 C141.4377,145.9228 145.6524,146.18 149.347,153.2673 C155.3442,145.7144 160.6447,146.0362 164.9057,154.9115 C172.0633,158.7518 173.1088,165.4173 166.5402,170.6803 C171.8287,175.5995 172.2704,180.6171 165.1716,184.2907 C162.9053,191.6391 156.75,193.056 151.4107,187.5911 C148.3543,196.3279 143.5735,197.407 136.7691,191.2839 C131.9038,196.5926 125.2537,195.2292 122.9217,188.3951 C116.005,193.9114 110.3886,193.5189 107.1248,184.4411 C99.4125,180.9737 97.51,175.3465 103.9509,168.9746 C97.411,163.5996 98.5293,156.1365 107.2599,154.1758 " fill="#FEFECE" filter="url(#f1vwvf5woeguxm)" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="113.5" y="173.4951">Auth0</text><!--MD5=[8fc3522a43f8c7199df5e09e5bb0188e]
+entity user--><ellipse cx="21" cy="14" fill="#FEFECE" filter="url(#f1vwvf5woeguxm)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M21,22 L21,49 M8,30 L34,30 M21,49 L8,64 M21,49 L34,64 " fill="none" filter="url(#f1vwvf5woeguxm)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="6" y="82.4951">user</text><!--MD5=[7468467f3b6b392f1d176d828c753b77]
+entity db--><path d="M233.5,32.5 C233.5,22.5 275,22.5 275,22.5 C275,22.5 316.5,22.5 316.5,32.5 L316.5,57.7969 C316.5,67.7969 275,67.7969 275,67.7969 C275,67.7969 233.5,67.7969 233.5,57.7969 L233.5,32.5 " fill="#FEFECE" filter="url(#f1vwvf5woeguxm)" style="stroke:#000000;stroke-width:1.5;"/><path d="M233.5,32.5 C233.5,42.5 275,42.5 275,42.5 C275,42.5 316.5,42.5 316.5,32.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="243.5" y="59.4951">Postgres</text><!--MD5=[38bfa9dc6018363cafe15f923a4b8db9]
+entity service--><rect fill="#FEFECE" filter="url(#f1vwvf5woeguxm)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="127" x="71.5" y="27"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="81.5" y="49.9951">Recipe Service</text><!--MD5=[7939a751299d0e0a4a36cd6fca1e9fb0]
+link user to service--><path d="M36.1406,45 C46.1157,45 56.0907,45 66.0657,45 " fill="none" id="user-to-service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="71.282,45,62.282,41,66.282,45,62.282,49,71.282,45" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4237da10b5a4f8d6cd5110d193e74a08]
+link service to auth0--><path d="M135,63.15 C135,83.097 135,116.2987 135,139.8909 " fill="none" id="service-to-auth0" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="135,145.069,139,136.069,135,140.069,131,136.069,135,145.069" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8c9c230065992e29d1f563ae0cbe7248]
+link service to db--><path d="M198.711,45 C208.523,45 218.336,45 228.148,45 " fill="none" id="service-to-db" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="233.279,45,224.279,41,228.279,45,224.279,49,233.279,45" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9255a211d64d655ed63ff4f5d59e6181]
+@startuml
+cloud Auth0 as auth0
+actor user
+database Postgres as db
+rectangle "Recipe Service" as service
+
+user -> service
+service - -> auth0
+service -> db
+@enduml
+
+PlantUML version 1.2021.10(Mon Aug 30 13:43:48 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
