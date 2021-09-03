@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    password: ${vault.db.password}
